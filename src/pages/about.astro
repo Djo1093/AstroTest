@@ -1,17 +1,72 @@
+---
+import { map } from "astro:schema";
+
+const pageTitle = "About Me";
+
+const identity = {
+  firstName: "Ud",
+  country: "Tanzania",
+  occupation: "Wannabe Learner",
+  hobbies: ["Gaming", "Football", "F1"],
+};
+
+const skills = ["HTML", "CSS", "JavaScript", "Python", "Astro", "Driving?"];
+
+const happy = true;
+const finished = false;
+const goal = 3;
+const skillColor = "grey"
+const fontWeight = "bold"
+const textCase = "uppercase"
+---
+
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>{pageTitle}</title>
+		<style define:vars={{skillColor,fontWeight,textCase}}>
+			h1{
+				color:purple;
+				font-size: 4rem;
+			}
+
+			.skill{
+				color:var(--skillColor);
+				font-weight:var(--fontWeight);
+				text-transform:var(--textCase);
+			}
+		</style>
 	</head>
 	<body>
-		<h1>Astro About Page</h1>
-        <a href="/">Home </a>
+		<a href="/">Home </a>
         <a href="/about/">About</a>
         <a href="/blog/">Blog</a>
+		
+		<h1>{pageTitle}</h1>
+        <h2>update on other pages</h2>
         <p>This is the first paragraph of the about page</p>
         <p> This is the second one</p>
+
+		<p>Checking facts with javascript,dynamic content in astro</p>
+		<ul>
+			<li>My Name is {identity.firstName}</li>
+			<li>I live in {identity.country} my occupation is {identity.occupation}</li>
+			{
+				identity.hobbies.length >= 2 && <li>Two of my hobbies are: {identity.hobbies[0]} and {identity.hobbies[1]}</li>
+			}
+		</ul>
+		<p>My skills are:</p>
+		<ul>
+  			{skills.map((skill) => <li class="skill">{skill}</li>)}
+		</ul>
+
+		{happy && <p>I am happy to be learning Astro!</p>}
+		{finished && <p>I finished this tutorial!</p>}	
+		{goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>}
+		
+
 	</body>
 </html>

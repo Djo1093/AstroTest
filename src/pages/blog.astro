@@ -1,17 +1,29 @@
+---
+const pageTitle = "Astro Learning Blog"
+---
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>{pageTitle}</title>
 	</head>
+	
 	<body>
         <a href="/">Home</a>
         <a href="/about/">About</a>
         <a href="/blog/">Blog</a>
-		<h1>This will have a blog in the future</h1>
+		<h1>{pageTitle}</h1>
+		<h2>This will have a blog in the future</h2>
         <p>For now placeholder </p>
         <p>Better i will post my learning of astro here</p>
+		<h4>Blogs:</h4>
+		<ul>
+			<l1>First Blog</l1>
+			<li><a href="/posts/post-1/">Post 1</a></li>
+			<li><a href="/posts/post-2/">Post 2</a></li>
+			<li><a href="/posts/post-3/">Post 3</a></li>
+		</ul>
 	</body>
 </html>
