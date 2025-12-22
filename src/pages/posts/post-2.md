@@ -1,4 +1,5 @@
 ---
+layout: '../../layouts/MarkdownPostLayout.astro'
 title: 'My Second Blog Post'
 pubDate: 17-12-2025
 description: 'Second Blog post'
@@ -8,6 +9,5 @@ image:
     alt: "The Astro logo on a dark background with a purple gradient arc."
 tags: ["astro", "blogging", "learning in public"]
 ---
-<a href="/blog/">Blogs</a>
 
-Second post placeholder for now
+## Second post placeholder for now

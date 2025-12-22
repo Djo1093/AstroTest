@@ -1,5 +1,6 @@
 ---
-title: 'My First Blog Post'
+layout: ../../layouts/MarkdownPostLayout.astro
+title: 'First Post'
 pubDate: 17-12-2025
 description: 'First Blog post from tutorial'
 author: 'me'
@@ -8,11 +9,6 @@ image:
     alt: 'The Astro logo on a dark background with a pink glow.'
 tags: ["astro", "blogging", "learning in public"]
 ---
-
-<a href="/blog/">Blogs</a>
-# First Post
-
-Publishes on: 17/12/2025
 
 This is my first post in the .md format first time for me writing a .md file raw ive used them in obsidian but never written them down in any other app
 

@@ -1,4 +1,5 @@
 ---
+layout: '../../layouts/MarkdownPostLayout.astro'
 title: 'Third Post'
 pubDate: 17-12-2025
 description: 'Third Post from tutorial'
@@ -8,6 +9,5 @@ image:
     alt: "The Astro logo on a dark background with rainbow rays."
 tags: ["astro", "blogging", "learning in public"]
 ---
-<a href="/blog/">Blogs</a>
 
 Third post placeholder for now
